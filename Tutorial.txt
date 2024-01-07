@@ -1,0 +1,42 @@
+Enter Number of Resources and Processes:
+
+The user starts by entering the number of resources they want to add and the number of processes they want to add.
+Resource Allocation:
+
+The user then provides values for each resource. These values represent the total available quantity of each resource in the system.
+Process Need and Allocation Input:
+
+Next, the user provides input for the Need and Allocation matrices for each process.
+The "Need" matrix represents the maximum resources a process may need to complete its execution.
+The "Allocation" matrix represents the resources currently allocated to each process.
+Banker's Algorithm Execution (banker function):
+
+Resource Input Collection:
+
+The algorithm collects the available resources, process needs, and current resource allocations from the user inputs.
+Calculations:
+
+It calculates the remaining resources (avail) after considering the current allocations.
+HTML tables are dynamically created to display the Need matrix and Allocation matrix.
+Algorithm Execution:
+
+The main Banker's Algorithm loop runs iteratively, checking each process's ability to execute based on available resources.
+For each process:
+It checks if the process can be executed based on its resource needs and the available resources.
+If a process can execute, it allocates the necessary resources and updates the available resources.
+If a process cannot execute due to insufficient resources, it logs this information.
+Output Display:
+
+An unordered list is dynamically created to display each iteration, including the process states and available resources.
+If a deadlock is detected during the iterations, the algorithm outputs "Deadlock."
+If all processes complete successfully, the algorithm outputs "Safe State."
+User Feedback and Result:
+
+The user can examine the algorithm's output, which shows how each iteration progresses, how much resources each process requests or releases, and the resulting available resources.
+If the algorithm successfully completes all iterations without encountering a deadlock, it indicates a "Safe State."
+Tips and Considerations:
+
+Users should ensure that input values are non-negative.
+The console can be checked for more detailed output and error messages.
+The iterative process helps demonstrate how the system dynamically manages resource allocation, avoiding deadlocks if possible.
+The Banker's Algorithm works to ensure that resource allocations are made in a way that prevents deadlocks and maintains the system in a safe state. It does so by carefully considering the needs and current allocations of processes along with the available resources. The provided code dynamically generates HTML elements to display the algorithm's progress and results.
